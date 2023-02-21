@@ -1,5 +1,5 @@
 //your code here
-let i=1
+let i=1 ;
  async function fetchByPage (){
  const cont = document.getElementById
 ('issue_container')
@@ -10,19 +10,19 @@ let i=1
 github.com/repositories/1296269/issues?
 page=${i}&per_page=5`)
  const parsedData = await rawData.json()
- let store =''
+ let store ='' ;
  parsedData.forEach(issue => {
  store += `<li>${issue.title}</li>`
  });
- cont.innerHTML = store
+ cont.innerHTML = store ;
  }
  fetchByPage(i)
  function loadNext(){
  i++;
- fetchByPage()
+ fetchByPage() ;
  }
  function loadPrev(){
  if(i === 1) return;
  i--;
- fetchByPage()
+ fetchByPage() ;
  }
